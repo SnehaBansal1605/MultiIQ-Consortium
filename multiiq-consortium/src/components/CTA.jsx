@@ -86,10 +86,10 @@ const CTA = () => {
                   Get detailed information about our investment opportunities
                 </p>
                 <a
-                  href="mailto:info@multiiqconsortium.com"
+                  href="mailto:sales@multi-iq.com"
                   className="text-accent font-semibold hover:text-gold-light transition-colors"
                 >
-                  info@multiiqconsortium.com
+                  sales@multi-iq.com
                 </a>
               </CardContent>
             </Card>
