@@ -48,7 +48,7 @@ const CTA = () => {
                     <label className="text-sm font-medium text-primary mb-2 block">
                       Phone Number
                     </label>
-                    <Input type="tel" placeholder="+1 (555) 000-0000" />
+                    <Input type="tel" placeholder="+1 (905) 781-7664" />
                   </div>
 
                   <div>
@@ -107,7 +107,7 @@ const CTA = () => {
                   href="tel:+15551234567"
                   className="text-accent font-semibold hover:text-gold-light transition-colors"
                 >
-                  +1 (555) 123-4567
+                  +1 (905) 781-7664
                 </a>
               </CardContent>
             </Card>
