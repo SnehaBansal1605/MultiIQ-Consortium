@@ -5,7 +5,7 @@ import { Badge } from "./ui/badge";
 import {
   MapPin,
   Building2,
-  TrendingUp,
+  // TrendingUp,
   DollarSign,
   ArrowRight,
 } from "lucide-react";
