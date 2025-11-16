@@ -1,10 +1,10 @@
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
-import logoNavy from "../assets/logo-navy.png";
+import logoNavy from "../assets/Logo-Dark.PNG";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import bannerOne from "../assets/bannerOne.mp4";
+import bannerOne from "../assets/bannerTwo.mp4";
 const Hero = () => {
   const [api, setApi] = useState(null);
 
@@ -35,8 +35,8 @@ const Hero = () => {
                   >
                     <source src={video} type="video/mp4" />
                   </video>
-                  <div className="absolute inset-0 bg-white/20"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-navy-light/20 to-primary/30"></div>
+                  <div className="absolute inset-0 bg-white/5"></div>
+                  {/* <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-navy-light/20 to-primary/30"></div> */}
                 </div>
               </CarouselItem>
             ))}
@@ -52,11 +52,11 @@ const Hero = () => {
             className="w-64 h-64 mx-auto mb-8 drop-shadow-2xl"
           />
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-accent leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black leading-tight text-shadow-black">
             The Intelligent Choice for Multifamily Investors
           </h1>
 
-          <p className="text-xl md:text-2xl mb-8 text-accent/90 leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 text-black/90 leading-relaxed text-shadow-black">
             Leverage government-backed CMHC financing with as little as{" "}
             <span className="font-bold text-gold-light">5% down</span>,{" "}
             <span className="font-bold text-gold-light">

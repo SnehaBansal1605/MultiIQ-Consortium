@@ -65,10 +65,10 @@ const InvestmentHighlights = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-accent">
-            Investment Highlights
+            Why Choose Multi-IQ Consortium
           </h2>
           <p className="text-xl text-accent/80 max-w-3xl mx-auto">
-            Everything you need for successful multifamily property investment
+            We handle everything
           </p>
         </div>
 

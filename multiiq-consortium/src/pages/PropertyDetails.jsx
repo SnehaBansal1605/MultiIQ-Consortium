@@ -4,6 +4,10 @@ import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Separator } from "../components/ui/separator";
+import fourthImg from "../assets/fourthImg.png";
+import fifthImg from "../assets/fifthImg.PNG";
+import eightPlexImg from "../assets/eightPlex.PNG";
+import sevenPlex from "../assets/sevenPlex.PNG";
 import infoProductOne from "../assets/pdfs/product1/Design-Floorplan Drwings-8102-33 Ave NW, Calgary (Bowness)-11-05-2025.pdf";
 import financingProductOne from "../assets/pdfs/product1/Proforma-8102-33 Ave NW, (Bowness)-Calgary-(Multi-IQ).pdf";
 import infoProductTwo from "../assets/pdfs/product2/Design & Drawings-8126 77 AVENU-575- SAD25-751-1.pdf";
@@ -28,10 +32,10 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
-import duplexImg from "../assets/duplex.jpg";
-import fourplexImg from "../assets/fourplex.jpg";
-import sixplexImg from "../assets/sixplex.jpg";
-import eightplexImg from "../assets/eightplex.jpg";
+// import duplexImg from "../assets/duplex.jpg";
+// import fourplexImg from "../assets/fourplex.jpg";
+// import sixplexImg from "../assets/sixplex.jpg";
+// import eightplexImg from "../assets/eightplex.jpg";
 
 const properties = [
   {
@@ -40,11 +44,16 @@ const properties = [
     city: "Calgary",
     community: "Bowness",
     location: "8102-33 Ave NW",
-    image: duplexImg,
+    image: eightPlexImg,
     price: "$2,865,789",
-    dscr: "115.27%",
     lendingType: "5%, Take Out",
     depositDetails: "$10k initial, Balance upon Firm",
+    dscr: "115.27%",
+    capRate: "5.75%",
+    cashOnCash: "17.99%",
+    roi: "142.64%",
+    cashFlow: "$26,291",
+    downPayment: "$146,155",
     closingOn: "Closing on 26 October, 2025",
     features: ["(4 )Three BR Main", "(4) 2BR Basement"],
     status: "Available",
@@ -67,9 +76,14 @@ const properties = [
     city: "Edmonton",
     community: "King Edward",
     location: "8126 -77th Ave",
-    image: fourplexImg,
+    image: sevenPlex,
     price: "$2,097,899",
-    dscr: "125.53%",
+    dscr: "117.65%",
+    capRate: "6.24%",
+    cashOnCash: "23.44%",
+    roi: "172.48%",
+    cashFlow: "$25,074",
+    downPayment: "$106,993",
     lendingType: "5%, Take Out",
     depositDetails: "$10k initial, Balance upon Firm",
     closingOn: "Closing on 26 October, 2025",
@@ -98,9 +112,14 @@ const properties = [
     city: "Calgary",
     community: "Forest Lawn",
     location: "740 Forlee St",
-    image: sixplexImg,
+    image: eightPlexImg,
     price: "$2,587,290",
-    dscr: "120.27%",
+    dscr: "116.77%",
+    capRate: "5.91%",
+    cashOnCash: "20.06%",
+    roi: "154.32%",
+    cashFlow: "$26,471",
+    downPayment: "$131,952",
     lendingType: "5%, Take Out",
     depositDetails: "$10k initial, Balance upon Firm",
     closingOn: "Closing on 26 November, 2025",
@@ -125,9 +144,14 @@ const properties = [
     city: "Calgary",
     community: "Forest Lawn",
     location: "1504 36TH Strret",
-    image: eightplexImg,
+    image: fourthImg,
     price: "$2,745,789",
     dscr: "115.64%",
+    capRate: "5.86%",
+    cashOnCash: "18.73%",
+    roi: "143.22%",
+    cashFlow: "$26,231",
+    downPayment: "$140,035",
     lendingType: "5%, Take Out",
     depositDetails: "$10k initial, Balance upon Firm",
     closingOn: "Closing on 26 November, 2025",
@@ -152,9 +176,14 @@ const properties = [
     city: "Calgary",
     community: "Bowness",
     location: "4336 72nd St",
-    image: eightplexImg,
+    image: fifthImg,
     price: "$2,897,999",
     dscr: "111.54%",
+    capRate: "5.54%",
+    cashOnCash: "14.08%",
+    roi: "138.80%",
+    cashFlow: "$20,803",
+    downPayment: "$147,798",
     lendingType: "5%, Take Out",
     depositDetails: "$10k initial, Balance upon Firm",
     closingOn: "Closing on 26 November, 2025",
@@ -179,9 +208,14 @@ const properties = [
     city: "Calgary",
     community: "Bowness",
     location: "6336 Bowmont Cres",
-    image: eightplexImg,
+    image: eightPlexImg,
     price: "$2,897,789",
     dscr: "116.11%",
+    capRate: "5.76%",
+    cashOnCash: "18.89%",
+    roi: "143.78%",
+    cashFlow: "$27,912",
+    downPayment: "$147,787",
     lendingType: "5%, Take Out",
     depositDetails: "$10k initial, Balance upon Firm",
     closingOn: "Closing on 26 November, 2025",
@@ -299,13 +333,13 @@ const PropertyDetails = () => {
                 <Separator className="my-6" />
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                  <div>
+                  <div className="text-left">
                     <p className="text-sm text-muted-foreground mb-1">DSCR</p>
                     <p className="text-xl font-bold text-primary">
                       {property.dscr}
                     </p>
                   </div>
-                  <div>
+                  <div className="text-left">
                     <p className="text-sm text-muted-foreground mb-1">
                       Lending Type
                     </p>
@@ -313,7 +347,7 @@ const PropertyDetails = () => {
                       {property.lendingType}
                     </p>
                   </div>
-                  <div>
+                  <div className="text-left">
                     <p className="text-sm text-muted-foreground mb-1">
                       Deposit Details
                     </p>
@@ -321,12 +355,32 @@ const PropertyDetails = () => {
                       {property.depositDetails}
                     </p>
                   </div>
-                  {/* <div>
-                    <p className="text-sm text-muted-foreground mb-1">Units</p>
-                    <p className="text-xl font-bold text-primary">
-                      {property.units}
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                  <div className="text-left">
+                    <p className="text-sm text-muted-foreground mb-1">
+                      Cap Rate
                     </p>
-                  </div> */}
+                    <p className="text-xl font-bold text-primary">
+                      {property.capRate}
+                    </p>
+                  </div>
+                  <div className="text-left">
+                    <p className="text-sm text-muted-foreground mb-1">
+                      Cash On Cash
+                    </p>
+                    <p className="text-xl font-bold text-primary">
+                      {property.cashOnCash}
+                    </p>
+                  </div>
+                  <div className="text-left">
+                    <p className="text-sm text-muted-foreground mb-1">
+                      Anuual ROI
+                    </p>
+                    <p className="text-xl font-bold text-accent">
+                      {property.roi}
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -508,7 +562,7 @@ const PropertyDetails = () => {
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Mail className="h-5 w-5 text-accent" />
-                    <span>sales@multi-iq.com</span>
+                    <span>info@multi-iq.com</span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Phone className="h-5 w-5 text-accent" />
@@ -517,9 +571,6 @@ const PropertyDetails = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <Button className="w-full bg-accent text-primary hover:bg-accent/90 h-12 text-lg font-semibold">
-                    Schedule Viewing
-                  </Button>
                   <Button
                     variant="outline"
                     className="w-full h-12 text-lg font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-accent"
@@ -529,7 +580,7 @@ const PropertyDetails = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Request Info Package
+                      Design & Floor Plans
                     </a>
                   </Button>
                   <Button
@@ -541,11 +592,15 @@ const PropertyDetails = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Calculate Financing
+                      Project Proforma
                     </a>
                   </Button>
                 </div>
-
+                <a href="mailto:info@multi-iq.com">
+                  <Button className="w-full bg-accent text-primary hover:bg-accent/90 h-12 text-lg font-semibold mt-4">
+                    Contact us for more info
+                  </Button>
+                </a>
                 <Separator className="my-6" />
 
                 <div className="text-sm text-muted-foreground">

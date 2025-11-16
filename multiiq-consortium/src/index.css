@@ -24,9 +24,9 @@ All colors MUST be HSL.
     --secondary-foreground: 210 80% 8%;
 
     --muted: 210 30% 95%;
-    --muted-foreground: 210 15% 45%;
+    --muted-foreground: 210 18% 16%;
 
-    --accent: 42 48% 65%;
+    --accent: 39 54% 49%;
     --accent-foreground: 210 80% 8%;
 
     --destructive: 0 84.2% 60.2%;
@@ -41,7 +41,7 @@ All colors MUST be HSL.
     /* Brand colors */
     --navy: 210 80% 8%;
     --navy-light: 210 60% 15%;
-    --gold: 42 48% 65%;
+    --gold: 39 54% 49%;
     --gold-light: 42 60% 75%;
 
     /* Gradients */

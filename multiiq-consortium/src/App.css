@@ -25,6 +25,47 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+@keyframes flashBanner {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.flash-banner {
+  animation: flashBanner 1.2s infinite ease-in-out;
+}
+
+.d-flex {
+  display: flex;
+  gap: 10px;
+}
+
+@keyframes flash {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.text-shadow-black {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.flash-effect {
+  animation: flash 1s infinite ease-in-out;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

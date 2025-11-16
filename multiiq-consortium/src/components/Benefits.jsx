@@ -46,14 +46,14 @@ const benefits = [
     icon: Home,
     title: "Turnkey Solution",
     description:
-      "Complete end-to-end service from property selection to tenant management",
+      "Complete end-to-end service from property selection to tenant management (can be managed no matter where you lived in the world).",
     stat: "Turnkey",
   },
   {
     icon: Award,
     title: "Positive Cash Flow",
     description:
-      "Guaranteed positive cash flow with minimum 1.1 debt coverage ratio",
+      "Guaranteed positive cash flow with minimum 1.1 debt coverage ratio ENSURING POSITIVE CASH FLOW 100%",
     stat: "1.1 DCR",
   },
 ];
@@ -64,7 +64,7 @@ const Benefits = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-            Why Choose MultiIQ Consortium?
+            Why MultiFamily Investing is a Smart Investment Solutions
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Experience the power of government-backed financing combined with
