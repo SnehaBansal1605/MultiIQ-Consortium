@@ -4,7 +4,7 @@ import logoNavy from "../assets/Logo-Dark.PNG";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import bannerOne from "../assets/bannerTwo.mp4";
+import bannerOne from "../assets/bannerThree.mp4";
 const Hero = () => {
   const [api, setApi] = useState(null);
 
@@ -53,7 +53,7 @@ const Hero = () => {
           />
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black leading-tight text-shadow-black">
-            The Intelligent Choice for Multifamily Investors
+            Your Complete Multifamily Investment Solution — All in One Place.
           </h1>
 
           <p className="text-xl md:text-2xl mb-8 text-black/90 leading-relaxed text-shadow-black">
