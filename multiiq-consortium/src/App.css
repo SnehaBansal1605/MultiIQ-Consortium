@@ -62,6 +62,86 @@
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
+header {
+  background-color: #00132f !important;
+  color: #fff;
+}
+
+@keyframes floatUp {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes lift {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-6px) scale(1.03);
+  }
+}
+
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 8px 30px rgba(255, 215, 100, 0.0);
+  }
+
+  50% {
+    box-shadow: 0 8px 30px rgba(255, 215, 100, 0.15);
+  }
+}
+
+/* Gold Shine Effect */
+@keyframes shineMove {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  50% {
+    opacity: 0.25;
+    transform: translateX(0%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.shine-animation {
+  background: linear-gradient(120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 100%);
+  animation: shineMove 4s ease-in-out infinite;
+}
+
 .flash-effect {
   animation: flash 1s infinite ease-in-out;
 }

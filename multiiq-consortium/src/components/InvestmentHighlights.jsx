@@ -67,7 +67,7 @@ const InvestmentHighlights = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-accent">
             Why Choose Multi-IQ Consortium
           </h2>
-          <p className="text-xl text-accent/80 max-w-3xl mx-auto">
+          <p className="text-xl text-accent/80 max-w-3xl mx-auto animate-[lift_4s_ease-in-out_infinite] animate-[float_3s_ease-in-out_infinite]">
             We handle everything
           </p>
         </div>

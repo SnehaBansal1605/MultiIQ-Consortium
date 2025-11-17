@@ -33,7 +33,8 @@ const properties = [
     capRate: "5.75%",
     cashOnCash: "17.99%",
     roi: "142.64%",
-    cashFlow: "$26,291",
+    roiAmount: "$1,042,355",
+    cashFlow: "$2,191",
     closingOn: "Closing on 26 October, 2025",
     features: ["(4 )Three BR Main", "(4) 2BR Basement"],
     status: "Available",
@@ -51,7 +52,8 @@ const properties = [
     capRate: "6.24%",
     cashOnCash: "23.44%",
     roi: "172.48%",
-    cashFlow: "$25,074",
+    roiAmount: "$922,728",
+    cashFlow: "$2,089",
     closingOn: "Closing on 26 October, 2025",
     features: [
       "(4 )Three BR Main",
@@ -73,7 +75,8 @@ const properties = [
     capRate: "5.91%",
     cashOnCash: "20.06%",
     roi: "154.32%",
-    cashFlow: "$26,471",
+    roiAmount: "$1,018,143",
+    cashFlow: "$2,206",
     closingOn: "Closing on 26 November, 2025",
     features: ["(4 )Three BR Main", "(4) 2BR Basement"],
     status: "Available",
@@ -91,7 +94,8 @@ const properties = [
     capRate: "5.86%",
     cashOnCash: "18.73%",
     roi: "143.22%",
-    cashFlow: "$26,231",
+    roiAmount: "$1,002,818",
+    cashFlow: "$2,186",
     closingOn: "Closing on 26 November, 2025",
     features: ["(4 )Three BR Main", "(4) 2BR Basement"],
     status: "Available",
@@ -109,7 +113,8 @@ const properties = [
     capRate: "5.54%",
     cashOnCash: "14.08%",
     roi: "138.80%",
-    cashFlow: "$20,803",
+    roiAmount: "$1,025,692",
+    cashFlow: "$1,734",
     closingOn: "Closing on 26 November, 2025",
     features: ["(4 )Three BR Main", "(4) 2BR Basement"],
     status: "Available",
@@ -127,7 +132,8 @@ const properties = [
     capRate: "5.76%",
     cashOnCash: "18.89%",
     roi: "143.78%",
-    cashFlow: "$27,912",
+    roiAmount: "$1,062,478",
+    cashFlow: "$2,326",
     closingOn: "Closing on 26 November, 2025",
     features: ["(4 )Three BR Main", "(4) 2BR Basement"],
     status: "Sold",
@@ -196,9 +202,14 @@ const Properties = () => {
                       <span>{property.location}</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-primary">
-                    <Building2 className="h-5 w-5" />
-                    <span className="font-bold">{property.community}</span>
+                  <div className="flex flex-col align-bottom">
+                    <div className="flex items-center gap-2 text-primary mb-2">
+                      <Building2 className="h-5 w-5" />
+                      <span className="font-bold">{property.community}</span>
+                    </div>
+                    <span className="text-accent font-semibold">
+                      {property.closingOn}
+                    </span>
                   </div>
                 </div>
               </CardHeader>
@@ -237,7 +248,7 @@ const Properties = () => {
 
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">
-                        Anuual ROI
+                        Annual 5-Year ROI
                       </p>
                       <p className="text-xl font-bold text-accent">
                         {property.roi}
@@ -251,8 +262,8 @@ const Properties = () => {
                     5-Year Equity Growth
                   </span>
                   <div className="flex items-center gap-2">
-                    <span className="text-accent font-semibold">
-                      {property.closingOn}
+                    <span className="text-accent text-xl font-semibold">
+                      {property.roiAmount}
                     </span>
                   </div>
                 </div>
