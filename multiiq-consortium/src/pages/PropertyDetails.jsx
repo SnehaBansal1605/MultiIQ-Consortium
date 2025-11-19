@@ -25,17 +25,12 @@ import {
   Building2,
   TrendingUp,
   DollarSign,
-  // Home,
-  // Calendar,
   CheckCircle2,
   ArrowLeft,
   Phone,
   Mail,
 } from "lucide-react";
-// import duplexImg from "../assets/duplex.jpg";
-// import fourplexImg from "../assets/fourplex.jpg";
-// import sixplexImg from "../assets/sixplex.jpg";
-// import eightplexImg from "../assets/eightplex.jpg";
+import { useInvestorForm } from "../contexts/InvestorFormContext";
 
 const properties = [
   {
@@ -239,7 +234,7 @@ const properties = [
 const PropertyDetails = () => {
   const { id } = useParams();
   const property = properties.find((p) => p.id === Number(id));
-
+  const { openForm } = useInvestorForm();
   if (!property) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
@@ -321,6 +316,32 @@ const PropertyDetails = () => {
                     <p className="text-5xl font-bold text-primary">
                       {property.price}
                     </p>
+                  </div>
+                  <div className="d-flex align-middle">
+                    <Button
+                      variant="outline"
+                      className="w-full h-12 text-lg font-semibold border-2 border-primary hover:text-primary hover:bg-accent bg-primary text-accent"
+                    >
+                      <a
+                        href={property.pdfs.infoPackage}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Design & Floor Plans
+                      </a>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="w-full h-12 text-lg font-semibold text-primary bg-accent hover:bg-primary hover:text-accent"
+                    >
+                      <a
+                        href={property.pdfs.financing}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Project Proforma
+                      </a>
+                    </Button>
                   </div>
                   {/* <div className="text-right">
                     <p className="text-muted-foreground mb-2">ROI</p>
@@ -570,34 +591,11 @@ const PropertyDetails = () => {
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <Button
-                    variant="outline"
-                    className="w-full h-12 text-lg font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-accent"
-                  >
-                    <a
-                      href={property.pdfs.infoPackage}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Design & Floor Plans
-                    </a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full h-12 text-lg font-semibold"
-                  >
-                    <a
-                      href={property.pdfs.financing}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Project Proforma
-                    </a>
-                  </Button>
-                </div>
                 <a href="mailto:info@multi-iq.com">
-                  <Button className="w-full bg-accent text-primary hover:bg-accent/90 h-12 text-lg font-semibold mt-4">
+                  <Button
+                    className="w-full bg-accent text-primary hover:bg-accent/90 h-12 text-lg font-semibold"
+                    onClick={openForm}
+                  >
                     Contact us for more info
                   </Button>
                 </a>

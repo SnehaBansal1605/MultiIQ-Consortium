@@ -96,7 +96,7 @@ const InvestmentHighlights = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Card className="bg-accent/10 backdrop-blur-sm border-accent/30 max-w-4xl mx-auto">
+          <Card className="animate-full-pulse backdrop-blur-sm border-accent/30 max-w-4xl mx-auto">
             <CardContent className="p-8">
               <h3 className="text-3xl font-bold text-accent mb-4">
                 Build Generational Wealth

@@ -1,13 +1,13 @@
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
-// import logoNavy from "../assets/Logo-Dark.PNG";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import bannerOne from "../assets/bannerThree.mp4";
+import bannerOne from "../assets/banner.mp4";
+import { useInvestorForm } from "../contexts/InvestorFormContext";
 const Hero = () => {
   const [api, setApi] = useState(null);
-
+  const { openForm } = useInvestorForm();
   const backgroundVideos = [bannerOne];
 
   useEffect(() => {
@@ -46,30 +46,15 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 pt-10 pb-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-accent/20">
-          {/* <img
-            src={logoNavy}
-            alt="MultiIQ Consortium"
-            className="w-56 h-56 mx-auto mb-8 drop-shadow-2xl"
-          /> */}
-
-          <h1 className="text-3xl md:text-5xl font-bold mb-8 text-black leading-tight text-shadow-gold">
+          <h1 className="text-3xl md:text-5xl font-bold mb-10 text-black leading-tight text-shadow-white">
             Your Complete Multifamily Investment Solution <br />- 100% Turnkey.
             100% Hassle-Free.
           </h1>
 
-          {/* <p className="text-xl md:text-2xl mb-8 text-black/90 leading-relaxed text-shadow-black">
-            Leverage government-backed CMHC financing with as little as{" "}
-            <span className="font-bold text-gold-light">5% down</span>,{" "}
-            <span className="font-bold text-gold-light">
-              50-year amortization
-            </span>
-            , and{" "}
-            <span className="font-bold text-gold-light">below-prime rates</span>
-          </p> */}
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-5">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button
               size="lg"
+              onClick={openForm}
               className="bg-accent text-primary hover:bg-gold-light font-semibold text-lg px-8 py-4 h-auto shadow-gold-glow transition-all hover:scale-105"
             >
               Start Investing Today
@@ -78,8 +63,9 @@ const Hero = () => {
 
             <Button
               size="lg"
+              onClick={openForm}
               variant="outline"
-              className="border-2 border-accent text-accent hover:bg-accent/10 font-semibold text-lg px-8 py-4 h-auto transition-all hover:scale-105"
+              className="border-2 border-accent text-accent hover:bg-accent font-semibold text-lg px-8 py-4 h-auto transition-all hover:scale-105"
             >
               Download Investor Guide
             </Button>

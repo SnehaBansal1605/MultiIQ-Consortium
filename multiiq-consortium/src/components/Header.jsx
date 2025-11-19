@@ -9,10 +9,9 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Properties", href: "#properties" },
-    { name: "Benefits", href: "#benefits" },
-    { name: "Process", href: "#process" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Properties", href: "/properties" },
+    { name: "Resources", href: "/resources" },
+    { name: "FAQ", href: "/faqs" },
   ];
 
   const scrollToSection = (e, href) => {
@@ -55,7 +54,7 @@ const Header = () => {
               className="ml-4 bg-gradient-to-r from-gold to-gold-light hover:opacity-90 text-navy font-semibold shadow-md"
               asChild
             >
-              <a href="#contact">Contact Us</a>
+              <a href="/contact-us">Contact Us</a>
             </Button>
           </div>
 

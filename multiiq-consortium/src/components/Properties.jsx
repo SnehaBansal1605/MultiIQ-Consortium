@@ -10,15 +10,12 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-// import duplexImg from "../assets/duplex.jpg";
-// import fourplexImg from "../assets/fourplex.jpg";
-// import sixplexImg from "../assets/sixplex.jpg";
-// import eightplexImg from "../assets/eightplex.jpg";
 import fourthImg from "../assets/fourthImg.png";
 import fifthImg from "../assets/fifthImg.PNG";
 import eightPlexImg from "../assets/eightPlex.PNG";
 import sevenPlex from "../assets/sevenPlex.PNG";
 import { Link } from "react-router-dom";
+import { useInvestorForm } from "../contexts/InvestorFormContext";
 
 const properties = [
   {
@@ -142,6 +139,7 @@ const properties = [
 ];
 
 const Properties = () => {
+  const { openForm } = useInvestorForm();
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -290,7 +288,7 @@ const Properties = () => {
                 {/* Button */}
                 <Link to={`/property/${property.id}`} className="block">
                   <Button className="w-full bg-accent text-primary hover:bg-gold-light font-semibold py-6 text-base group">
-                    Request Property Details
+                    View Property Details
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -312,6 +310,7 @@ const Properties = () => {
               </p>
               <Button
                 size="lg"
+                onClick={openForm}
                 className="bg-accent text-primary hover:bg-gold-light font-semibold text-lg px-8 py-6 h-auto shadow-gold-glow"
               >
                 Schedule a Consultation

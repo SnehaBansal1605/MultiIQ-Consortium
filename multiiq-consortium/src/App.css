@@ -156,6 +156,33 @@ header {
   }
 }
 
+@keyframes bgTextTransformPulse {
+  0% {
+    background-color: rgba(255, 255, 255, 0.08);
+    /* accent bg */
+    color: #c5a45f;
+    /* gold text */
+    transform: scale(1);
+  }
+
+  50% {
+    background-color: rgba(255, 215, 0, 0.18);
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #c5a45f;
+    transform: scale(1);
+  }
+}
+
+.animate-full-pulse {
+  animation: bgTextTransformPulse 3s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
