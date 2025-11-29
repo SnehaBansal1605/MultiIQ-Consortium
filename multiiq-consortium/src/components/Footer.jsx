@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logoGold from "../assets/Logo-White.PNG";
 
 const Footer = () => {
@@ -22,28 +23,28 @@ const Footer = () => {
             <h4 className="text-accent font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#benefits"
+                <Link
+                  to="/#benefits"
                   className="text-accent/80 hover:text-accent transition-colors"
                 >
                   Benefits
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#process"
+                <Link
+                  to="/resources"
                   className="text-accent/80 hover:text-accent transition-colors"
                 >
-                  Process
-                </a>
+                  Resources
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact-us"
                   className="text-accent/80 hover:text-accent transition-colors"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -53,26 +54,10 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#privacy"
+                  href="/privacy-policy"
                   className="text-accent/80 hover:text-accent transition-colors"
                 >
                   Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#terms"
-                  className="text-accent/80 hover:text-accent transition-colors"
-                >
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#disclaimer"
-                  className="text-accent/80 hover:text-accent transition-colors"
-                >
-                  Disclaimer
                 </a>
               </li>
             </ul>

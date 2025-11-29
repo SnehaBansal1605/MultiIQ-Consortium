@@ -51,7 +51,10 @@ const highlights = [
 
 const InvestmentHighlights = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-primary via-navy-light to-primary relative overflow-hidden">
+    <section
+      className="py-24 bg-gradient-to-br from-primary via-navy-light to-primary relative overflow-hidden"
+      id="benefits"
+    >
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-5">
         <div

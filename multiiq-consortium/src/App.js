@@ -12,6 +12,8 @@ import InvestorFormModal from "./components/InvestorFormModal";
 import Resources from "./pages/Resources";
 import AllProperties from "./pages/AllProperties";
 import Contact from "./pages/Contact";
+import ScrollToHash from "./components/ScrollToHash";
+import PrivacyPolicyPage from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -24,12 +26,14 @@ const App = () => {
           <Sonner />
           <InvestorFormModal />
           <BrowserRouter>
+            <ScrollToHash />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/property/:id" element={<PropertyDetails />} />
               <Route path="/properties" element={<AllProperties />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/contact-us" element={<Contact />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
