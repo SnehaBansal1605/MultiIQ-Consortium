@@ -1,4 +1,4 @@
-import { FileText, Download } from "lucide-react";
+import { FileText, Eye } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -9,15 +9,14 @@ import {
 import { Button } from "../components/ui/button";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
+import pdfOne from "../assets/resources/CMHC MLI_FAQS_(Multi-IQ).pdf";
 const Resources = () => {
   const resources = [
     {
-      title: "Investment Guide 2024",
+      title: "CMHC MLI_FAQS",
       description:
         "Complete guide to multi-family property investment in Canada",
-      url: "#",
-      size: "2.4 MB",
+      url: pdfOne,
     },
     {
       title: "CMHC Financing Overview",
@@ -101,17 +100,14 @@ const Resources = () => {
 
                 <CardContent>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-muted-foreground">
-                      {resource.size}
-                    </span>
                     <Button
                       size="sm"
                       className="bg-gradient-to-r from-gold to-gold-light hover:opacity-90 text-navy font-semibold"
                       asChild
                     >
-                      <a href={resource.url} download>
-                        <Download className="w-4 h-4 mr-2" />
-                        Download
+                      <a href={resource.url} target="_blank" rel="noreferrer">
+                        <Eye className="w-4 h-4 mr-2" />
+                        View
                       </a>
                     </Button>
                   </div>

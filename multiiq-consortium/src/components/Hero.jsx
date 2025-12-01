@@ -63,11 +63,20 @@ const Hero = () => {
 
             <Button
               size="lg"
-              onClick={openForm}
               variant="outline"
+              onClick={() => {
+                window.open(
+                  "/pdfs/INVESTOR PACKAGE-CMHC-MLI-(MultiIQ).pdf",
+                  "_blank"
+                );
+                window.open(
+                  "/pdfs/QR Code-CMHC MLI Select Program Cost Breakdown.pdf",
+                  "_blank"
+                );
+              }}
               className="border-2 border-accent text-accent hover:bg-accent font-semibold text-lg px-8 py-4 h-auto transition-all hover:scale-105"
             >
-              Download Investor Guide
+              View Investor Guide
             </Button>
           </div>
 
