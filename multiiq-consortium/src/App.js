@@ -14,6 +14,7 @@ import AllProperties from "./pages/AllProperties";
 import Contact from "./pages/Contact";
 import ScrollToHash from "./components/ScrollToHash";
 import PrivacyPolicyPage from "./pages/PrivacyPolicy";
+import FAQ from "./components/FAQ";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => {
               <Route path="/resources" element={<Resources />} />
               <Route path="/contact-us" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/faqs" element={<FAQ />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
